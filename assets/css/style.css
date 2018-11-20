@@ -1,0 +1,32 @@
+
+
+.pageTitle {
+    font-size: 60px;
+}
+
+a:hover {
+    color: #4a4a4a; 
+    cursor: default;
+}
+
+.hangmanImage {
+    width: 80%;
+}
+
+.incorrectGuesses {
+    margin-bottom: 20px;
+}
+
+.gameTracker {
+    margin-top: 5px;
+}
+
+.gameCounters {
+    text-align: right;
+}
+
+
+.wordToGuess {
+    text-align: center;
+
+}

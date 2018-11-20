@@ -1,37 +1,88 @@
-    <!DOCTYPE html>
-    <html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link rel="stylesheet" href="assets/css/reset.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
-        <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-        <link rel="stylesheet" href="assets/css/style.css">
-        <title>Hangman</title>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.4.0/js/all.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Hangman</title>
+</head>
 
-    <body>
-        <nav class="navbar" role="navigation" aria-label="main navigation">
-            <div class="navbar-brand">
-                <a class="navbar-item">
-                    <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
-                </a>
+<body>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item pageTitle">
+                <div><i class="fas fa-skull-crossbones"></i> Hangman</div>
+            </a>
+        </div>
+    </nav>
+
+
+
+    <div class="columns is-centered">
+        <div class="column is-two-fifths">
+            <img class="hangmanImage" src="assets/images/hangmanPlaceHolder.jpg" alt="hangman image place holder">
+        </div>
+
+
+        <div class="column is-one-quarter">
+            <div class="card incorrectGuesses">
+                <div class="card-content">
+                    <p class="title">
+                        Guesses:
+                    </p>
+                    <p class="subtitle">
+                        <span id="wrongList"></span>
+                    </p>
+                </div>
             </div>
-        </nav>
 
-        <div class="columns is-centered">
-            <div class="column is-half">
-            Hangman Image
-            </div>
-            <div class="column is-one-fifth">
-            Incorrect Guesses
+            <div class="card gameTracker">
+                <div class="card-content">
+                    <div class="columns">
+                        <div class="column">
+                            <div class="title is-4">
+                                Guesses Left:
+                            </div>
+                            <div class="title is-4">
+                                Wins:
+                            </div>
+                            <div class="title is-4">
+                                Losses:
+                            </div>
+                        </div>
+                        <div class="column gameCounters">
+                            <div class="subtitle">
+                                <span id="remainingGuesses">--</span>
+                            </div>
+                            <div class="subtitle">
+                                <span id="yourWins">--</span>
+                            </div>
+
+                            <div class="subtitle">
+                                <span id="yourLosses">--</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class = "columns is-centered">
-            <div class = "column is-three-quarters">
-                 
+    </div>
+
+        
+        <div class="columns is-centered">
+            <div class="column is-three-quarters">
+                <div class="card wordToGuess">
+                    <div class="card-content">
+                        <p class="title is-2">
+                            <span id="currentPuzzle"></span>
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -42,7 +93,7 @@
 
 
         <script src="assets/javascript/game.js"></script>
-    </body>
+</body>
 
 
-    </html>
+</html>
